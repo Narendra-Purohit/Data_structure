@@ -12,14 +12,14 @@ void push(char ch) {
     if (top < SIZE - 1)
         stack[++top] = ch;
     else
-        printf("⚠️ Stack Overflow\n");
+        printf("Stack Overflow\n");
 }
 
 char pop() {
     if (top >= 0)
         return stack[top--];
     else {
-        printf("⚠️ Stack Underflow\n");
+        printf(" Stack Underflow\n");
         return '#'; // Sentinel character
     }
 }
@@ -73,12 +73,12 @@ void infixToPostfix(char *infix, char *postfix) {
 int main() {
     char infix[SIZE], postfix[SIZE];
 
-    printf("🔢 Enter infix expression (no spaces): ");
+    printf(" Enter infix expression (no spaces): ");
     scanf("%s", infix);
 
     infixToPostfix(infix, postfix);
 
-    printf("✅ Postfix expression: %s\n", postfix);
+    printf(" Postfix expression: %s\n", postfix);
 
     return 0;
 }
